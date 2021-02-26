@@ -1,2 +1,2 @@
 # catformer
-As of right now nope of the code works.
+As of right now none of the code works.
