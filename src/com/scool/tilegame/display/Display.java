@@ -2,6 +2,7 @@ package com.scool.tilegame.display;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class Display {
     private JFrame frame;
@@ -9,12 +10,14 @@ public class Display {
 
     private String title;
     private int width, height;
+    private ImageIcon icon;
 
     public Display(String title, int width, int height) {
         this.title = title;
         this.width = width;
         this.height = height;
         System.out.println("Creating Window");
+        icon = new ImageIcon("/textures/icon.jpg");
 
         createDisplay();
 
@@ -26,8 +29,7 @@ public class Display {
     // Init window
     private void createDisplay() {
         frame = new JFrame(title);
-        // TODO get image for the app
-        //  - frame.setIconImage();
+        frame.setIconImage(icon.getImage());
         frame.setSize(width, height);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
